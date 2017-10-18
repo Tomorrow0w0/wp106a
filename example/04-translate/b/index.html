@@ -15,8 +15,11 @@ input { width:400px }
     var chinese = document.getElementById('chinese')
     var e = english.value.split(/\s+/)
     var c = []
-    for (var i=0; i < e.length; i++) {
-      c.push(e2c[e[i]])
+   // for (var i=0; i < e.length; i++) {
+   // for (var ei in e) {
+    for (var t of e) {
+      //c.push(e2c[e[i]])
+      c.push(e2c[t])
     }
     chinese.innerText = c.join(' ')
   }
